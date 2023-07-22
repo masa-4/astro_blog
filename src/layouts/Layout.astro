@@ -1,5 +1,6 @@
 --- 
 import HeaderLogo from '../components/HeaderLogo.astro';
+import SideMenu from '../components/SideMenu.astro';
 interface Props {
 	title: string;
 }
@@ -19,6 +20,7 @@ const { title } = Astro.props;
 	</head>
 	<body>
 		<HeaderLogo />
+		<SideMenu />
 		<slot />
 	</body>
 </html>
