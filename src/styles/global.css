@@ -1,3 +1,25 @@
 body {
   margin-top: 0;
 }
+
+p {
+  font-size: 16px;
+}
+
+main {
+  display: flex;
+}
+
+article {
+  width: 80%;
+}
+
+#header-logo {
+  text-align: center;
+  width: 100%;
+  background-color: #dfdddd;
+}
+
+#header-logo > img {
+  padding: 50px;
+} 
