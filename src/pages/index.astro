@@ -1,36 +1,40 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 <Layout>
-	<div class="index-contents blog-description">
-		<h2>このブログについて</h2>
-		<h3>Astro</h3>
-		<p>このブログはAstroというjavascriptのフレームワークで作成しています</p>
-		<p>でブログなどの静的なサイトの制作にとても有用なフレームワークです</p>
-		<p>ドキュメントがかなり充実しており気軽に触ることができるので、ぜひ一度触ってみてください</p>
-		<p><a href="https://astro.build/">Astro公式サイト</a></p>
-		<h3>render</h3>
-		<p>ブログを公開するために使用しているPaasはRenderというサービスです</p>
-		<p>Githubのリポジトリと紐づけることができて、指定したブランチにpushが走ると自動的にビルドまでしてくれるとてもいサービスです</p>
-		<p>しかも無料枠があるので、ポートフォリオ程度であれば財布のことを気にせずに使うことが可能です</p>
-		<p>さらにRenderでのデプロイ方法もAstroの公式ドキュメントに記載されており、公開も簡単にできます</p>
-		<p>こちらも一度チェックしてみてください</p>
-		<p><a href="https://render.com/">render公式サイト</a></p>
-	</div>
-	<div class="index-contents author-introduction">
-    <h2>自己紹介</h2>
-    <img class="author-introduction-logo" src="/author_logo.png">
-    <div class="author-introduction-text">
-      <p class="author-introduction-text-label">名前</p>
-			<p class="author-introduction-text-value">taji</p>
-      <p class="author-introduction-text-label">経歴</p>
-			<p class="author-introduction-text-value">兵庫県出身 25歳 文系出身エンジニア <br> 現在はSIerにてwebサイトの運用保守チームのPL</p>
-      <p class="author-introduction-text-label">技術</p>
-			<p class="author-introduction-text-value">Laravel、PHP、Go、Python、javascript、AWS、jquery、astro</p>
-      <p class="author-introduction-text-label">趣味</p>
-			<p class="author-introduction-text-value">スカッシュ、バイク、一人飲み</p>
-			<p class="author-introduction-text-label">SNS</p>
-      <p class="author-introduction-text-value"><a href="https://github.com/masa-4">Github</a></p>
-    </div>
-  </div>
+	<article class="w-full leading-10">
+		<div class="my-0 m-auto">
+			<h2 class="text-xl font-black">このブログについて</h2>
+			<h3 class="text-lg font-bold mt-10 mb-5">Astro</h3>
+			<p>このブログはAstroというjavascriptのフレームワークで作成しています</p>
+			<p>ブログなどの静的なサイトの制作にとても有用なフレームワークです</p>
+			<p>ドキュメントがかなり充実しており、気軽に触ることができるのでぜひ一度触ってみてください</p>
+			<button class="mt-5 bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-7 rounded-full"><a href="https://astro.build/">Astro公式サイト</a></button>
+
+			<h3 class="text-lg font-bold mt-10 mb-5">render</h3>
+			<p>ブログを公開するために使用しているPaasはRenderというサービスです</p>
+			<p>Githubのリポジトリと紐づけることができて、指定したブランチにpushが走ると自動的にビルドまでしてくれるとてもいサービスです</p>
+			<p>しかも無料枠があるので、ポートフォリオ程度であれば財布のことを気にせずに使うことが可能です</p>
+			<p>さらにRenderでのデプロイ方法もAstroの公式ドキュメントに記載されており、公開も簡単にできます</p>
+			<p>こちらも一度チェックしてみてください</p>
+			<button class="mt-5 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-7 rounded-full"><a href="https://render.com/">render公式サイト</a></button>
+		</div>
+
+		<div class="text-center mt-20 my-0 m-auto">
+			<h2 class="text-xl font-black mb-5 my-0">自己紹介</h2>
+			<img class="my-0 m-auto" src="/author_logo.png">
+			<div class="mt-5">
+				<h3 class="text-lg font-bold">名前</h3>
+				<p class="">taji</p>
+				<h3 class="text-lg font-bold">経歴</h3>
+				<p class="">兵庫県出身 25歳 <br> 現在はSIerにてwebサイトの運用保守チームのPL</p>
+				<h3 class="text-lg font-bold">技術</h3>
+				<p class="">Laravel、PHP、Go、Python、javascript、AWS、jquery、astro</p>
+				<h3 class="text-lg font-bold">趣味</h3>
+				<p class="">スカッシュ、バイク、一人飲み</p>
+				<h3 class="text-lg font-bold">SNS</h3>
+				<button class="mt-5 bg-black hover:bg-gray-700 text-white font-bold pl-3 py-2 pr-4 rounded-full"><img src="/github-mark-white.png" class="inline mr-3" width="30px" height="30px"><a href="https://github.com/masa-4">Github</a></button>
+			</div>
+		</div>
+	</article>
 </Layout>
