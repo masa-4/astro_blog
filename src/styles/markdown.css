@@ -1,0 +1,32 @@
+.markdown-body {
+  width: 80%;
+  margin: 0 auto;
+  text-align: start;
+}
+.markdown-body h1 {
+  font-weight: 900;
+  margin-top: 150px;
+  margin-bottom: 10px;
+  font-size: xx-large;
+}
+
+.markdown-body h2 {
+  font-weight: 700;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  font-size: x-large;
+}
+
+.markdown-body h3 {
+  font-weight: 600;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-size: large;
+}
+
+.astro-code {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: start;
+  padding: 20px;
+}

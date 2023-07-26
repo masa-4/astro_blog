@@ -1,0 +1,16 @@
+---
+import Layout from "./Layout.astro";
+import '../styles/markdown.css'
+const { frontmatter } = Astro.props;
+---
+<Layout>
+  <div id="article-header">
+    <p>Published on: {frontmatter.pubDate.slice(0,10)}</p>
+    <p><em>{frontmatter.description}</em></p>
+    <p>Written by {frontmatter.author}</p>
+  </div>
+    <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
+  <div class="markdown-body">
+    <slot />
+  </div>
+</Layout>
