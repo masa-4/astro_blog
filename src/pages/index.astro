@@ -1,15 +1,32 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Button from "../components/Button.astro";
+const allPosts = await Astro.glob('../pages/posts/*.md');
+import BlogList from '../components/BlogList.astro';
+
 ---
 <Layout>
-	<article class="w-full leading-10">
-		<div class="my-0 m-auto">
+	<article class="w-full leading-10 text-center">
+		<div>
 			<h2 class="text-xl font-black">このブログについて</h2>
+			<h3 class="text-lg font-bold mt-10">何を書いているか</h3>
+			<p>このブログは私が日々学習したことや、読んだ本の感想を適当に書き出しているブログです</p>
+			<h2 class="text-lg font-black mt-10">記事へのリンク</h2>
+			<ul>
+				<ul>
+					{allPosts.slice(0,3).map((post) => <BlogList url={post.url} title={post.frontmatter.title}/>)}
+				</ul>
+			</ul>
+			<Button btnLabel="記事リンク一覧" href="/article_lists"/>
+		</div>
+
+		<div class="mt-36">
+			<h2 class="text-xl font-black">使っているもの</h2>
 			<h3 class="text-lg font-bold mt-10 mb-5">Astro</h3>
 			<p>このブログはAstroというjavascriptのフレームワークで作成しています</p>
 			<p>ブログなどの静的なサイトの制作にとても有用なフレームワークです</p>
 			<p>ドキュメントがかなり充実しており、気軽に触ることができるのでぜひ一度触ってみてください</p>
-			<button class="mt-5 bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-7 rounded-full"><a href="https://astro.build/">Astro公式サイト</a></button>
+			<Button btnLabel="Astro公式サイト" href="https://astro.build/" />
 
 			<h3 class="text-lg font-bold mt-10 mb-5">render</h3>
 			<p>ブログを公開するために使用しているPaasはRenderというサービスです</p>
@@ -17,24 +34,7 @@ import Layout from "../layouts/Layout.astro";
 			<p>しかも無料枠があるので、ポートフォリオ程度であれば財布のことを気にせずに使うことが可能です</p>
 			<p>さらにRenderでのデプロイ方法もAstroの公式ドキュメントに記載されており、公開も簡単にできます</p>
 			<p>こちらも一度チェックしてみてください</p>
-			<button class="mt-5 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-7 rounded-full"><a href="https://render.com/">render公式サイト</a></button>
-		</div>
-
-		<div class="mt-20 my-0 m-auto">
-			<h2 class="text-xl font-black mb-5 my-0">自己紹介</h2>
-			<img src="/author_logo.png">
-			<div class="mt-5">
-				<h3 class="text-lg font-bold">名前</h3>
-				<p class="">taji</p>
-				<h3 class="text-lg font-bold">経歴</h3>
-				<p class="">兵庫県出身 25歳 <br> 現在はSIerにてwebサイトの運用保守チームのPL</p>
-				<h3 class="text-lg font-bold">技術</h3>
-				<p class="">Laravel、PHP、Go、Python、javascript、AWS、jquery、astro</p>
-				<h3 class="text-lg font-bold">趣味</h3>
-				<p class="">スカッシュ、バイク、一人飲み</p>
-				<h3 class="text-lg font-bold">SNS</h3>
-				<button class="mt-5 bg-black hover:bg-gray-700 text-white font-bold pl-3 py-2 pr-4 rounded-full"><img src="/github-mark-white.png" class="inline mr-3" width="30px" height="30px"><a href="https://github.com/masa-4">Github</a></button>
-			</div>
+			<Button btnLabel="render公式サイト" href="https://render.com/"/>
 		</div>
 	</article>
 </Layout>
